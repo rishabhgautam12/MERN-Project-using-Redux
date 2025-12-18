@@ -1,4 +1,4 @@
-const express = require("express");
+rconst express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5050;
 mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("connect to database"))
-  .catch(() => console.log(err));
+  .catch((err) => console.log(err));
 
 //schema
 const userSchema = mongoose.Schema({
