@@ -434,4 +434,7 @@ app.get("/admin/bookings", async (req, res) => {
 });
 
 //server is running
-app.listen(PORT, () => console.log("server is running at port:" + PORT));
+app.listen(PORT)
+  .then(() => console.log(`Server running on ${PORT}`))
+  .catch((err) => console.error(err));
+
